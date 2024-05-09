@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "id": "tutlaclient",
+  "version": "${version}",
+  "name": "TutlaClient",
+  "description": "Gyatt Client",
+  "authors": [
+    "TutlaMC"
+  ],
+  "contact": {
+    "website": "https://tutla.net",
+    "repo": "https://github.com/Admin/TutlaClient"
+  },
+  "license": "LGPL-3.0",
+  "icon": "assets/tutlaclient/icon.png",
+  "environment": "client",
+  "entrypoints": {
+    "client": [
+      "tutla.mc.tutlaclient.client.TutlaClientClient"
+    ],
+    "main": [
+      "tutla.mc.tutlaclient.TutlaClient"
+    ]
+  },
+  "mixins": [
+    "tutlaclient.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "fabric": "*",
+    "minecraft": "${minecraft_version}"
+  }
+}
