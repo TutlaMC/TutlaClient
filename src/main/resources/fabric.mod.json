@@ -3,15 +3,15 @@
   "id": "tutlaclient",
   "version": "${version}",
   "name": "TutlaClient",
-  "description": "Gyatt Client",
+  "description": "Tutla Client",
   "authors": [
     "TutlaMC"
   ],
   "contact": {
     "website": "https://tutla.net",
-    "repo": "https://github.com/Admin/TutlaClient"
+    "repo": "https://github.com//tutlamc/TutlaClient"
   },
-  "license": "LGPL-3.0",
+  "license": "MIT",
   "icon": "assets/tutlaclient/icon.png",
   "environment": "client",
   "entrypoints": {
