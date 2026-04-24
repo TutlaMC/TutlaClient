@@ -1,10 +1,41 @@
 package net.tutla.client;
 
+import com.mojang.blaze3d.platform.InputConstants;
 import net.fabricmc.api.ClientModInitializer;
+import net.fabricmc.fabric.api.client.event.lifecycle.v1.ClientTickEvents;
+import net.fabricmc.fabric.api.client.keymapping.v1.KeyMappingHelper;
+import net.minecraft.client.KeyMapping;
+import net.minecraft.client.Minecraft;
+import net.minecraft.client.gui.screens.DisconnectedScreen;
+import net.minecraft.network.chat.Component;
+import org.lwjgl.glfw.GLFW;
 
 public class TutlaClientClient implements ClientModInitializer {
-	@Override
+    public static KeyMapping leaveKey;
+
+    @Override
 	public void onInitializeClient() {
-		// This entrypoint is suitable for setting up client-specific logic, such as rendering.
+        leaveKey = KeyMappingHelper.registerKeyMapping(
+                new KeyMapping(
+                        "key.tutlaclient.leaveKey", // The translation key for the key mapping.
+                        InputConstants.Type.KEYSYM, // // The type of the keybinding; KEYSYM for keyboard, MOUSE for mouse.
+                        GLFW.GLFW_KEY_P, // The GLFW keycode of the key.
+                        KeyMapping.Category.MISC // The category of the mapping.
+                )
+        );
+
+
+
+        ClientTickEvents.END_CLIENT_TICK.register(client -> {
+            while (leaveKey.consumeClick()) {
+                Minecraft mc = Minecraft.getInstance();
+                if (mc.getCurrentServer() != null && mc.screen != null) {
+                    mc.disconnect(new DisconnectedScreen(mc.screen, Component.literal("Left Server"), Component.literal("")), false);
+                }
+                if (mc.isSingleplayer()){
+                    mc.disconnect(new DisconnectedScreen(mc.screen, Component.literal("Left World"), Component.literal("")), false);
+                }
+            }
+        });
 	}
 }
