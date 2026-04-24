@@ -8,6 +8,7 @@ import net.minecraft.client.KeyMapping;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.screens.DisconnectedScreen;
 import net.minecraft.network.chat.Component;
+import net.tutla.client.module.LeaveThisGoBack;
 import org.lwjgl.glfw.GLFW;
 
 public class TutlaClientClient implements ClientModInitializer {
@@ -27,14 +28,17 @@ public class TutlaClientClient implements ClientModInitializer {
 
 
         ClientTickEvents.END_CLIENT_TICK.register(client -> {
+            Minecraft mc = Minecraft.getInstance();
             while (leaveKey.consumeClick()) {
-                Minecraft mc = Minecraft.getInstance();
                 if (mc.getCurrentServer() != null && mc.screen != null) {
                     mc.disconnect(new DisconnectedScreen(mc.screen, Component.literal("Left Server"), Component.literal("")), false);
                 }
                 if (mc.isSingleplayer()){
                     mc.disconnect(new DisconnectedScreen(mc.screen, Component.literal("Left World"), Component.literal("")), false);
                 }
+            }
+            if (client.player != null){
+                LeaveThisGoBack.main(mc);
             }
         });
 	}
