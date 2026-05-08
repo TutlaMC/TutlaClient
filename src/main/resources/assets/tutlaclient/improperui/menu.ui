@@ -43,7 +43,7 @@ div #settings-window {
         }
 
         div {
-            inner-text: "Rendering"
+            inner-text: "PvP"
             margin-left: 2
             height: 10
             width: 100%
@@ -124,6 +124,38 @@ div #settings-window {
             margin-left: 200
             active: true
         }
+
+        div {
+            inner-text: "NoPumpkinHead"
+            margin-top: 7
+            margin-left: 2
+            height: 10
+            text-color: #ffd8a1
+        }
+        checkbox #noviewbob -tutlaclient:config.properties:nopumpkinhead {
+            margin-top: 5
+            margin-left: 200
+            active: true
+        }
+
+        div {
+            inner-text: "NoPortalOverlay"
+            margin-top: 7
+            margin-left: 2
+            height: 10
+            text-color: #ffd8a1
+        }
+        checkbox #noviewbob -tutlaclient:config.properties:noportaloverlay {
+            margin-top: 5
+            margin-left: 200
+            active: true
+        }
+
+
+
+
+
+
 
         div {
             margin-top: 14

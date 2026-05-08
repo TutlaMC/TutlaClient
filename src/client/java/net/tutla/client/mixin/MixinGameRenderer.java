@@ -3,7 +3,7 @@ package net.tutla.client.mixin;
 import com.mojang.blaze3d.vertex.PoseStack;
 import net.minecraft.client.renderer.GameRenderer;
 import net.minecraft.client.renderer.state.level.CameraRenderState;
-import net.tutla.client.TutlaUtil;
+import net.tutla.client.util.TutlaUtil;
 import net.tutla.client.module.NoHurtCam;
 import net.tutla.client.module.NoViewBob;
 import org.spongepowered.asm.mixin.Mixin;

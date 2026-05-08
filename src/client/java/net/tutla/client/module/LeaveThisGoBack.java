@@ -3,7 +3,7 @@ package net.tutla.client.module;
 import com.mojang.blaze3d.platform.InputConstants;
 import net.minecraft.client.Minecraft;
 import net.tutla.client.Module;
-import net.tutla.client.TutlaUtil;
+import net.tutla.client.util.TutlaUtil;
 import net.tutla.client.config.ConfigType;
 
 public class LeaveThisGoBack extends Module {

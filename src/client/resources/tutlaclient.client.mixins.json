@@ -13,6 +13,7 @@
   },
   "mixins": [
     "MixinCamera",
-    "MixinGameRenderer"
+    "MixinGameRenderer",
+    "MixinGui"
   ]
 }

@@ -10,10 +10,7 @@ import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.screens.DisconnectedScreen;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.Identifier;
-import net.tutla.client.module.ClearWater;
-import net.tutla.client.module.LeaveThisGoBack;
-import net.tutla.client.module.NoHurtCam;
-import net.tutla.client.module.NoViewBob;
+import net.tutla.client.module.*;
 import net.tutla.client.ui.MenuCallback;
 import org.lwjgl.glfw.GLFW;
 
@@ -83,5 +80,7 @@ public class TutlaClientInitializer implements ClientModInitializer {
         modules.put(NoHurtCam.class, new NoHurtCam());
         modules.put(NoViewBob.class, new NoViewBob());
         modules.put(ClearWater.class, new ClearWater());
+        modules.put(NoPortalOverlay.class, new NoPortalOverlay());
+        modules.put(NoPumpkinHead.class, new NoPumpkinHead());
     }
 }

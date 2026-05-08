@@ -10,6 +10,6 @@ public class MenuCallback implements CallbackListener {
 
     @CallbackHandler
     public void saveSettings(MouseEvent e) {
-        Config.saveAll();
+        if (e.input.isDown()) Config.saveAll();
     }
 }
