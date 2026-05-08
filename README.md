@@ -32,7 +32,7 @@
 <summary>🌀 <b>Key Binds</b></summary>
 
 <br>
-**Scroll to *Tutla Client* in __controls menu__ to see it**
+<b>Scroll to <i>Tutla Client</i> in <u>controls menu</u> to see it</b>
 
 | ⌨️ Keybind                                      | 📖 Description                |
 |-------------------------------------------------|-------------------------------|
