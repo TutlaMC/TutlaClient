@@ -82,5 +82,7 @@ public class TutlaClientInitializer implements ClientModInitializer {
         modules.put(ClearWater.class, new ClearWater());
         modules.put(NoPortalOverlay.class, new NoPortalOverlay());
         modules.put(NoPumpkinHead.class, new NoPumpkinHead());
+        modules.put(NoFire.class, new NoFire());
+        modules.put(FullBright.class, new FullBright());
     }
 }

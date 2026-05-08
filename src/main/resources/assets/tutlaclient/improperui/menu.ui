@@ -151,6 +151,31 @@ div #settings-window {
             active: true
         }
 
+        div {
+            inner-text: "NoFire"
+            margin-top: 7
+            margin-left: 2
+            height: 10
+            text-color: #ffd8a1
+        }
+        checkbox #noviewbob -tutlaclient:config.properties:nofire {
+            margin-top: 5
+            margin-left: 200
+            active: true
+        }
+
+        div {
+            inner-text: "FullBright"
+            margin-top: 7
+            margin-left: 2
+            height: 10
+            text-color: #ffd8a1
+        }
+        checkbox #noviewbob -tutlaclient:config.properties:fullbright {
+            margin-top: 5
+            margin-left: 200
+            active: true
+        }
 
 
 
