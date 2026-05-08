@@ -11,7 +11,7 @@ public class Config {
         return configReader;
     }
 
-    public static void saveAll(){
+    public static void loadAll(){
         TutlaClientInitializer.getModules().forEach((t, module) -> {
             if(module.configType == ConfigType.BOOLEAN){
                 module.setEnabled(configReader.readBool(module.configName, false));

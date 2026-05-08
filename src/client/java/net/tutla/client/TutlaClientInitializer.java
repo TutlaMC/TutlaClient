@@ -10,6 +10,7 @@ import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.screens.DisconnectedScreen;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.Identifier;
+import net.tutla.client.config.Config;
 import net.tutla.client.module.*;
 import net.tutla.client.ui.MenuCallback;
 import org.lwjgl.glfw.GLFW;
@@ -46,6 +47,7 @@ public class TutlaClientInitializer implements ClientModInitializer {
         );
 
         initAllModules();
+        Config.loadAll();
 
         ClientTickEvents.END_CLIENT_TICK.register(client -> {
             Minecraft mc = Minecraft.getInstance();

@@ -7,7 +7,7 @@ import net.tutla.client.config.ConfigType;
 
 public class NoHurtCam extends Module {
     public NoHurtCam() {
-        super("NoHurtCam", "Prevents shake when hit");
+        super("NoHurtCam", "Prevents shake when damaged");
         setConfig("nohurtcam", ConfigType.BOOLEAN);
     }
 
