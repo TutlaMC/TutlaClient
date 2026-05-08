@@ -1,0 +1,258 @@
+div #background {
+    size: 100%
+    background-color: black
+    opacity: 0.5
+}
+
+div #settings-window {
+    size: 260 100%
+    center: both
+    background-color: #15100c
+    border-thickness: 1
+    border-color: #5e3c16
+    border-radius: 4
+    shadow-distance: 4
+    shadow-color: #ff9b21
+
+    div #settings {
+        size: 88% 175
+        margin-left: 6%
+        background-color: none
+        scrollable: true
+
+        child-align: grid
+        grid-columns: 2
+
+        div #titlebar {
+                size: 100% 18
+                background-color: #24170d
+
+                div #title {
+                    size: 100% 10
+                    inner-text: "&6Tutla Client Settings"
+                    text-align: center
+                    text-scale: 1
+                    text-color: #ffbe6b
+                    background-color: none
+                    margin-top: 5
+                }
+        }
+
+        div {
+            margin-bottom: 20
+        }
+
+        div {
+            inner-text: "Rendering"
+            margin-left: 2
+            height: 10
+            width: 100%
+            text-align: center
+            text-color: #ffd8a1
+            background-color: #15100c
+        }
+        div {
+            margin-bottom: 10
+        }
+
+        div {
+            inner-text: "LeaveThisGoBack"
+            margin-top: 7
+            margin-left: 2
+            height: 10
+            text-color: #ffd8a1
+        }
+        checkbox #leavethisgoback -tutlaclient:config.properties:leavethisgoback {
+            margin-top: 5
+            margin-left: 200
+            active: true
+        }
+
+
+
+
+
+        div {
+            inner-text: "Rendering"
+            margin-top: 24
+            margin-left: 2
+            height: 10
+            width: 100%
+            text-align: center
+            text-color: #ffd8a1
+            background-color: #15100c
+        }
+        div {
+            margin-bottom: 35
+        }
+
+        div {
+            inner-text: "NoHurtCam"
+            margin-top: 7
+            margin-left: 2
+            height: 10
+            text-color: #ffd8a1
+        }
+        checkbox #nohurtcam -tutlaclient:config.properties:nohurtcam {
+            margin-top: 5
+            margin-left: 200
+            active: true
+        }
+
+        div {
+            inner-text: "Clear Water"
+            margin-top: 7
+            margin-left: 2
+            height: 10
+            text-color: #ffd8a1
+        }
+        checkbox #clearwater -tutlaclient:config.properties:clearwater {
+            margin-top: 5
+            margin-left: 200
+            active: false
+        }
+
+        div {
+            inner-text: "NoViewBob"
+            margin-top: 7
+            margin-left: 2
+            height: 10
+            text-color: #ffd8a1
+        }
+        checkbox #noviewbob -tutlaclient:config.properties:noviewbob {
+            margin-top: 5
+            margin-left: 200
+            active: true
+        }
+
+        div {
+            margin-top: 14
+            height: 4
+        }
+
+        div {
+            margin-top: 14
+            height: 4
+        }
+
+        div {
+            inner-text: "UI Scale"
+            margin-top: 6
+            margin-left: 2
+            height: 10
+            text-color: #ffd8a1
+        }
+
+        slider #ui-scale {
+            min: 0.5
+            max: 2.0
+            val: 1.0
+            width: 90%
+            margin-top: 10
+        }
+
+        div {
+            inner-text: "Opacity"
+            margin-top: 6
+            margin-left: 2
+            height: 10
+            text-color: #ffd8a1
+        }
+
+        slider #opacity {
+            min: 0.1
+            max: 1.0
+            val: 0.8
+            width: 90%
+            margin-top: 10
+        }
+
+        div {
+            inner-text: "Menu Speed"
+            margin-top: 6
+            margin-left: 2
+            height: 10
+            text-color: #ffd8a1
+        }
+
+        slider #speed {
+            min: 0.5
+            max: 3.0
+            val: 1.2
+            width: 90%
+            margin-top: 10
+        }
+
+        div {
+            inner-text: "Particles"
+            margin-top: 7
+            margin-left: 2
+            height: 10
+            text-color: #ffd8a1
+        }
+
+        checkbox #particles {
+            margin-top: 5
+            margin-left: 200
+            active: true
+        }
+
+        div {
+            inner-text: "Chat Effects"
+            margin-top: 7
+            margin-left: 2
+            height: 10
+            text-color: #ffd8a1
+        }
+
+        checkbox #chatfx {
+            margin-top: 5
+            margin-left: 200
+            active: false
+        }
+
+        div {
+            inner-text: "Sound Volume"
+            margin-top: 6
+            margin-left: 2
+            height: 10
+            text-color: #ffd8a1
+        }
+
+        slider #volume {
+            min: 0
+            max: 100
+            val: 70
+            width: 90%
+            margin-top: 10
+        }
+
+
+
+
+    }
+
+    button #save {
+        size: 88% 18
+        margin-left: 6%
+        margin-top: 90%
+
+        on-click: saveSettings
+
+        background-color: #24170d
+        border-thickness: 1
+        border-color: #5e3c16
+        border-radius: 3
+        shadow-distance: 2
+        shadow-color: #ff9b21
+
+        inner-text: "&6Save Settings"
+        text-align: center
+        text-color: #ffbe6b
+
+        hovered => {
+            shadow-distance: 4
+            border-color: #ff9b21
+        }
+    }
+}

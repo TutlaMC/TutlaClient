@@ -5,7 +5,7 @@
 	"name": "TutlaClient",
 	"description": "This is an example description! Tell everyone what your mod is about!",
 	"authors": [
-		"Me!"
+		"TutlaMC"
 	],
 	"contact": {
 		"homepage": "https://fabricmc.net/",
@@ -19,7 +19,7 @@
 			"net.tutla.TutlaClient"
 		],
 		"client": [
-			"net.tutla.client.TutlaClientClient"
+          "net.tutla.client.TutlaClientInitializer"
 		],
 		"fabric-datagen": [
 			"net.tutla.client.TutlaClientDataGenerator"

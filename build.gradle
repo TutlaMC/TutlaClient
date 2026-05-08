@@ -40,7 +40,7 @@ dependencies {
 
 	// Fabric API. This is technically optional, but you probably want it anyway.
 	implementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_api_version}"
-	
+    implementation files("libs/ImproperUI-26.1-0.0.7-BETA.jar")
 }
 
 processResources {

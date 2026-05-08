@@ -1,4 +1,5 @@
 {
+  "key.tutlaclient.menuKey": "Open Menu",
   "key.tutlaclient.leaveKey": "Leave",
-  "category.tutlaclient.keys": "Tutla Client"
+  "key.category.tutlaclient.keys": "Tutla Client"
 }
