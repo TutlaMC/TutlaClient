@@ -43,13 +43,6 @@
 
 ---
 
-### 🌀 Default Twists
-- `DEFAULT` – Standard manhunt rules
-- `PIG_OP_LOOT` – Pigs drop OP loot (only for the speedrunner 🐷💎)
-- **More twists coming soon! 🔧**
-
----
-
 ## 🛠️ Configuration
 
 Configure via the in-game menu (Default key: `p`)
