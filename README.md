@@ -13,7 +13,6 @@
 
 <details>
 <summary>🖲️ <b>Modules</b></summary>
-
 <br>
 
 | ⚙️ Category   | 💻 Module        | 📖 Description                                      |
