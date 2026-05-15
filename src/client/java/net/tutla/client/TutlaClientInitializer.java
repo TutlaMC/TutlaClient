@@ -52,10 +52,7 @@ public class TutlaClientInitializer implements ClientModInitializer {
         ClientTickEvents.END_CLIENT_TICK.register(client -> {
             Minecraft mc = Minecraft.getInstance();
             while (leaveKey.consumeClick()) {
-                if (mc.getCurrentServer() != null && mc.screen != null) {
-                    mc.disconnect(new DisconnectedScreen(mc.screen, Component.literal("Left Server"), Component.literal("")), false);
-                }
-                if (mc.isSingleplayer()){
+                if (mc.getCurrentServer() != null) {
                     mc.disconnect(new DisconnectedScreen(mc.screen, Component.literal("Left World"), Component.literal("")), false);
                 }
             }

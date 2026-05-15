@@ -45,7 +45,7 @@
 
 ## 🛠️ Configuration
 
-Configure via the in-game menu (Default key: `p`)
+Configure via the in-game menu (Default key: `k`)
 
 ---
 
